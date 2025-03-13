@@ -1,5 +1,7 @@
 #define SENDER
 
+#include "entry.h"
+
 void setup() {
 #ifdef SENDER
   setup_sender();

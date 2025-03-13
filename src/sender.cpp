@@ -50,9 +50,9 @@ static RadioEvents_t RadioEvents;
 void OnTxDone( void );
 void OnTxTimeout( void );
 
-void setup() {
+void setup_sender() {
     Serial.begin(115200);
-    Mcu.begin(HELTEC_BOARD,SLOW_CLK_TPYE);
+    Mcu.begin(RF_FREQUENCY,0);
 	
     txNumber=0;
 
@@ -69,7 +69,7 @@ void setup() {
 
 
 
-void loop()
+void loop_sender()
 {
 	if(lora_idle == true)
 	{
